@@ -29,17 +29,17 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  const { name, picture } = req.body;
+  const { picture } = req.body;
   connection.query(
-    "INSERT INTO mywork (name, picture) VALUES (?, ?)",
-    [name, picture],
+    "INSERT INTO mywork (picture) VALUES (?)",
+    [picture],
     (err, result) => {
       if (err) {
         console.error(err);
         res.status(500).send("Error saving this tattoo");
       } else {
         const id = result.insertId;
-        const createdTattoo = { id, name, picture };
+        const createdTattoo = { id, picture };
         res.status(201).json(createdTattoo);
       }
     }
