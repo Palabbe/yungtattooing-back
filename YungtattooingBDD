@@ -1,0 +1,12 @@
+CREATE DATABASE yungtattooing;
+USE yungtattooing;
+CREATE TABLE about (id INT NOT NULL AUTO_INCREMENT, text TEXT, PRIMARY KEY(id));
+CREATE TABLE mywork (id INT NOT NULL AUTO_INCREMENT, picture VARCHAR(255), PRIMARY KEY(id));
+CREATE TABLE recommendations (id INT NOT NULL AUTO_INCREMENT, client_name VARCHAR(255), client_picture VARCHAR(255), client_opinion TEXT, PRIMARY KEY(id));
+INSERT INTO about (text) VALUES ("J’ai grandi en France et suis née en Corée du Sud. Passionnée par l’art sous toutes ses formes et l’humain, j’essaie de mélanger mes racines à la culture européenne. J’adore m’inspirer d’estampes japonaises, de natures mortes et de vous !");
+INSERT INTO mywork (picture) VALUES ("https://zupimages.net/up/21/29/n96j.jpeg");
+INSERT INTO mywork (picture) VALUES ("https://zupimages.net/up/21/29/52ak.jpg");
+INSERT INTO mywork (picture) VALUES ("https://zupimages.net/up/21/29/sz9l.jpg");
+INSERT INTO recommendations (client_name, client_picture, client_opinion) VALUES ("Mathieu", "https://zupimages.net/up/21/29/v0wj.jpg", "Connaissant Juliette avant son entrée dans le monde du tatouage, spectateur de son talent depuis de nombreuses années, c'est tout naturellement que je lui ai confié mon dos... Gros projet en perspective, confiance, talent et passion sont au rendez-vous ! Je suis fier d'arborer ce magnifique dragon réalisé par ses soins !");
+INSERT INTO recommendations (client_name, client_picture, client_opinion) VALUES ("Elodie", "https://zupimages.net/up/21/29/2xha.jpg", "Je me suis présenté à Juliette avec pour projet un tatouage qui comporterait une plante. Je n'étais pas vraiment fixée sur le motif, mais Juliette m'a posé des questions personnelles afin de définir ce qui me représenterait le plus. Elle m'a proposé plusieurs croquis de cactus qu'elle avait préalablement réalisés. Une fois le dessin choisi, elle m'a soigneusement tatoué la cheville avec une technique au point par point. Je ne connaissais pas du tout cette technique, aucune douleur et une cicatrisation très rapide ! Je recommande Juliette à 1000% c'est une personne à l'écoute, douce et très professionnelle");
+
